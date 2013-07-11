@@ -178,7 +178,6 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\UIWebDbContext.cs" />
     <Compile Include="Models\User\Charity.cs" />
-    <Compile Include="Models\CharityRegister.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\VolunteerRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -295,7 +294,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\CharityRegister\RegisterC.cshtml" />
-    <Content Include="Views\VolunteerRegister\RegisterVolunteer.cshtml" />
+    <Content Include="Views\Volunteer\RegisterVolunteer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -16,7 +16,7 @@ namespace GiveIT.UI.Web.Controllers
 
         UIWebDbContext db = new UIWebDbContext();
 
-
+        [HttpGet]
         [AllowAnonymous]
         public ActionResult RegisterVolunteer()
         {
@@ -26,7 +26,7 @@ namespace GiveIT.UI.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult RegisterVolunteer(VolunteerRegister model)
+        public ActionResult RegisterVolunteer(Volunteer model)
         {
 
             if (ModelState.IsValid)

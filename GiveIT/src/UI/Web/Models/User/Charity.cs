@@ -8,34 +8,21 @@ using System.Web;
 namespace GiveIT.UI.Web.Models
 {
     [Table("Charity")]
-    public class Charity
+    public class Charity : User
     {
-        [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int CharityId { get; set; }
-
+        [Required]
+        [Display(Name = "Charity Name *")]
         [StringLength(100)]
         public string CharityName { get; set; }
-
+        
+        [Display(Name = "Mission, Location of Population Served")]
+        [DataType(DataType.MultilineText)]
         public string MissionAndLocation { get; set; }
 
+        [Required]
+        [RegularExpression(@"^\d{2}-\d{7}$",
+               ErrorMessage = "EIN entered is not valid. Please try again.")]
         [StringLength(10)]
         public string EIN { get; set; }
-
-        [StringLength(80)]
-        public string StreetAddress { get; set; }
-
-        [StringLength(80)]
-        public string StreetAddress2 { get; set; }
-
-        [StringLength(30)]
-        public string City { get; set; }
-
-        [StringLength(20)]
-        public string State { get; set; }
-
-        [StringLength(10)]
-        public string ZipCode { get; set; }
-
     }
 }

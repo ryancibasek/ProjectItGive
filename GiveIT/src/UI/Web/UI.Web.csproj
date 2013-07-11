@@ -166,6 +166,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CharityRegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,6 +180,7 @@
     <Compile Include="Models\User\Charity.cs" />
     <Compile Include="Models\CharityRegister.cs" />
     <Compile Include="Models\User\User.cs" />
+    <Compile Include="Models\VolunteerRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +295,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\CharityRegister\RegisterC.cshtml" />
+    <Content Include="Views\VolunteerRegister\RegisterVolunteer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,4 +1,4 @@
-﻿@model GiveIT.UI.Web.Models.VolunteerRegister
+﻿@model GiveIT.UI.Web.Models.Volunteer
 
 @{
     ViewBag.Title = "Volunteer Registration";
@@ -135,6 +135,7 @@
 
         <div class ="input-submit">
             <input type ="submit" value="Join" />
+            <button onclick="location.href='@Url.Action("RegisterVolunteer", "Volunteer")'">Clear Fields</button>
         </div>
     </fieldset>
 }

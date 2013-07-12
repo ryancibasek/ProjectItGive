@@ -179,7 +179,7 @@
     <Compile Include="Models\UIWebDbContext.cs" />
     <Compile Include="Models\User\Charity.cs" />
     <Compile Include="Models\User\User.cs" />
-    <Compile Include="Models\VolunteerRegister.cs" />
+    <Compile Include="Models\User\Volunteer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

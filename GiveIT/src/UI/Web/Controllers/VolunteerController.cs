@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using WebMatrix.WebData;
 
 namespace GiveIT.UI.Web.Controllers
@@ -21,7 +23,7 @@ namespace GiveIT.UI.Web.Controllers
         public ActionResult RegisterVolunteer()
         {
             return View();
-        }
+        }     
 
         [HttpPost]
         [AllowAnonymous]

@@ -33,17 +33,24 @@ namespace GiveIT.UI.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                WebSecurity.CreateUserAndAccount(model.UserName, model.Password,
-                    propertyValues: new
-                    {
-                        ContactFirstName = model.ContactFirstName,
-                        ContactLastName = model.ContactLastName,
-                        VolunteerHours = model.VolunteerHours,
-                        PhoneNumber = model.PhoneNumber,
-                        PhoneNoExtension = model.PhoneNoExtension,
-                        EmailAddress = model.EmailAddress
-                    });
+                try
+                {
+                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password,
+                        propertyValues: new
+                        {
+                            ContactFirstName = model.ContactFirstName,
+                            ContactLastName = model.ContactLastName,
+                            VolunteerHours = model.VolunteerHours,
+                            PhoneNumber = model.PhoneNumber,
+                            PhoneNoExtension = model.PhoneNoExtension,
+                            EmailAddress = model.EmailAddress
+                        });
 
+                }
+                catch (MembershipCreateUserException e)
+                {
+                    
+                }
             }
             return View(model);
         }

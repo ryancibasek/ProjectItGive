@@ -5,7 +5,7 @@
 
 <h2>Join Today and Connect with Volunteers</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("RegisterC", "CharityRegister", FormMethod.Post, new {name = "RegisterC"})) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -149,9 +149,17 @@
 
         <p>
             <input type="submit" value="Join" />
-            <button onclick="location.href='@Url.Action("RegisterC", "CharityRegister")'">Clear Fields</button>
+            <button onclick="clearFields()">Clear Fields</button>
         </p>
     </fieldset>
+    
+    <script type ="text/javascript">
+
+        function clearFields() {
+            var form = document.forms["RegisterC"];
+            $(form).find("input[type='text']").attr("value", "");
+        }
+    </script>
 }
 
 @section Scripts {
